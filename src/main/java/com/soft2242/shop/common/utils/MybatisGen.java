@@ -12,6 +12,7 @@ import java.io.File;
 import java.util.*;
 
 public class MybatisGen {
+
     public static void main(String[] args) {
         String path = System.getProperty("user.dir").concat(File.separator).concat("src").concat(File.separator).concat("main")
                 .concat(File.separator).concat("java").concat(File.separator).concat("com").concat(File.separator).concat("soft2242").concat(File.separator).concat("shop").concat(File.separator);
@@ -25,7 +26,7 @@ public class MybatisGen {
         outputFileStringMap.put(OutputFile.entity, path + "entity");
         outputFileStringMap.put(OutputFile.mapper, path + "mapper");
         outputFileStringMap.put(OutputFile.xml, pathXml);
-        FastAutoGenerator.create("jdbc:mysql://localhost:3306/shop_online", "root", "85005795qQ")
+        FastAutoGenerator.create("jdbc:mysql://localhost:3306/shop_online", "root", "cg011022")
                 .globalConfig(builder -> {
                     builder.author("ycshang").enableSwagger(); // 设置作者// 开启 swagger 模式
 
@@ -65,6 +66,7 @@ public class MybatisGen {
 
     // 处理 all 情况
     protected static List<String> getTables(String tables) {
+        System.out.println("成功！");
         return "all".equals(tables) ? Collections.emptyList() : Arrays.asList(tables.split(","));
     }
 

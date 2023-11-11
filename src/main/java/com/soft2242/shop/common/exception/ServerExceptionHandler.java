@@ -49,3 +49,4 @@ public class ServerExceptionHandler {
         return Result.error(ErrorCode.INTERNAL_SERVER_ERROR);
     }
 }
+
