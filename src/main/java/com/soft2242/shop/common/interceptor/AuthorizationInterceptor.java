@@ -67,7 +67,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
         //    将需要登录拦截器配置到容器中，并配置不被拦截的路径
         @Override
         public void addInterceptors(InterceptorRegistry registry) {
-            registry.addInterceptor(getAuthorizationInterceptor()).addPathPatterns("/user/profile/**").addPathPatterns("/member/**").addPathPatterns("/order/**").addPathPatterns("/cart/**").addPathPatterns("/address/**");
+            registry.addInterceptor(getAuthorizationInterceptor()).addPathPatterns("/user/profile/**").addPathPatterns("/member/**").addPathPatterns("/order/**").addPathPatterns("/cart/**");
         }
     }
 
